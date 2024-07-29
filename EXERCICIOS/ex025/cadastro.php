@@ -1,2 +1,2 @@
-os dados foram emviados
-PHP nescessario
+Os dados foram enviados
+Arquivo PHP nescessario
