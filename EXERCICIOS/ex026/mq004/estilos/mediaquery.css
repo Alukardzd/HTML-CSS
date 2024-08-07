@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/*TODAS AS DEMAIS MIDÍAS*/
+
+/*
+    Typical Device Breakpoints
+Pequenas Telas: até 600px
+Celular: até 600px até 768
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes Telas: acima de 1200px
+*/
+
+@media print {
+    *{
+        font-size: 1em;
+    }
+     
+    body {
+        background-image: url(../imagens/back-print.jpg); /*Desnecessario*/
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: none;
+        color: black;
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: "Essa Impressão foi feita através do Site Azazel Diabolicus";
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    #computer { display: none; }
+
+    #phone { display: none; }
+
+    #print { display: block; }
+
+    #tablet { display: none; }
+
+    #television { display: none; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    #computer { display: none; }
+
+    #phone { display: none; }
+
+    #print { display: none; }
+
+    #tablet { display: block; }
+
+    #television { display: none; }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    #computer { display: block; }
+
+    #phone { display: none; }
+
+    #print { display: none; }
+
+    #tablet { display: none; }
+
+    #television { display: none; }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    #computer { display: none; }
+
+    #phone { display: none; }
+
+    #print { display: none; }
+
+    #tablet { display: none; }
+
+    #television { display: block; }
+}
